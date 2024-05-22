@@ -1,4 +1,4 @@
-const reactDescriptions = ['Fundamental', 'Viva Jesús', 'Los negros son la imagen viva de la maldad'];
+const reactDescriptions = ['Fundamental', 'Idk', 'Core'];
 
 const Info = [
 'Elías',
