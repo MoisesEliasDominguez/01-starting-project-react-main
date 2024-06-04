@@ -1,13 +1,20 @@
+import {useState} from 'react';
 import Header from './components/Header/Header.jsx';
 import componentImg from './assets/components.png/';
 import { CORE_CONCEPTS } from './data';
 import CoreConcepts from './components/CoreConcept/CoreConcept.jsx';
 import TabButton from './components/TabButton/TabButton.jsx';
 
+let defaultContent = "Press a button";
+
 function App() {
+  const [content, setContent] = useState("Press a button");
 
   function handleClick(selectedButton){
-    console.log(selectedButton);
+
+    defaultContent = selectedButton;
+    setContent(selectedButton);
+    //console.log(defaultContent);
   }
 
   return (
@@ -54,6 +61,7 @@ function App() {
             <TabButton handleClick = {() => {handleClick('Props')}}>Props</TabButton>
             <TabButton handleClick = {() => {handleClick('State')}}>State</TabButton>
           </menu>
+          {defaultContent}
         </section>
       
 
